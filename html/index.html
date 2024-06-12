@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/functions.js">
+        sessionStorage("resultat","");
+    </script>
 </head>
 <body>
-    
+    <div class="plate">
+        <input type="text" id="pantalla">
+        <div class="flexRow">
+            <button onclick="asignarValor(7)">7</button>
+            <button onclick="asignarValor(8)">8</button>
+            <button onclick="asignarValor(9)">9</button>
+            <button onclick="asignarValor('/')">/</button>
+        </div>
+        <div class="flexRow">
+            <button onclick="asignarValor(4)">4</button>
+            <button onclick="asignarValor(5)">5</button>
+            <button onclick="asignarValor(6)">6</button>
+            <button onclick="asignarValor('*')">x</button>
+        </div>
+        <div class="flexRow">
+            <button onclick="asignarValor(1)">1</button>
+            <button onclick="asignarValor(2)">2</button>
+            <button onclick="asignarValor(3)">3</button>
+            <button onclick="asignarValor('-')">-</button>
+        </div>
+        <div class="flexRow">
+            <button onclick="clear()">C</button>
+            <button onclick="asignarValor(0)">0</button>
+            <button onclick="resolver()">=</button>
+            <button onclick="asignarValor('+')">+</button>
+        </div>
+    </div>
 </body>
 </html>

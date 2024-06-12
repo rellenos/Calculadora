@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* text-align: center; */
+}
+
+.plate {
+    margin: auto;
+    padding: 20px;
+    width: 400px;
+    height: 600px;
+    background-color: lightcoral;
+}
+
+input[type="text"] {
+    width: 90%;
+    height: 80px;
+    margin: 5%;
+    background-color: lightblue;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    height: 15%;
+}
+
+button {
+    width: 25%;
+    height: 100%;
+}
