@@ -2,25 +2,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: verdana;
 }
 
 body {
-    /* text-align: center; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .plate {
-    margin: auto;
+    /* margin: auto; */
     padding: 20px;
     width: 400px;
-    height: 600px;
-    background-color: lightcoral;
+    /* height: 600px; */
+    background-color: #bbb;
 }
 
-input[type="text"] {
-    width: 90%;
+#pantalla {
+    width: 100%;
     height: 80px;
-    margin: 5%;
-    background-color: lightblue;
+    margin: 5% 0;
+    padding: 5%;
+    font-size: 3em;
+    text-align: end;
+    /* background-color: lightblue; */
+}
+
+#historial {
+    width: 200px;
+    height: 600px;
 }
 
 .flexRow {
@@ -29,7 +40,49 @@ input[type="text"] {
     height: 15%;
 }
 
-button {
+.buttons {
+    background-color: #616161;
+    height: 400px;
+}
+
+.button {
+    /* height: 60%; */
+    color: #fff;
+    font-size: 1.5em;
+    border: none;
+    
+}
+
+.button:hover {
+    background-color: #42424298;
+}
+    
+.number {
+    width: 33.3%;
+    height: 100px;
+    background-color: #424242;
+}
+
+.operator {
+    width: 100%;
+    height: 66.6px;
+    background-color: #616161;
+}
+
+#botonResolver {
+    background-color: blue;
+}
+
+.boxLeft {
+    width: 75%;
+    float: left;
+}
+
+.boxRight {
+    display: flex;
+    flex-direction: column;
     width: 25%;
     height: 100%;
+    float: right;
+
 }
