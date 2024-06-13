@@ -5,31 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/functions.js">
-        sessionStorage("operations","");
-    </script>
+    
 </head>
 <body>
     <div class="plate">
         <input type="text" id="pantalla">
+        <div class="flexRow ">
+            <div><span>BIN</span></div>
+            <div id="pantallaSecundaria1"></div>
+        </div>
+        <div class="flexRow ">
+            <div><span>HEX</span></div>
+            <div id="pantallaSecundaria2"></div>
+        </div>
+        <div class="flexRow ">
+            <div><span>OCT</span></div>
+            <div id="pantallaSecundaria3"></div>
+        </div>
         <div class="buttons">
             <div class="boxLeft">
-                <div class="flexRow">
+                <div class="flexRowButtons">
                     <button onclick="asignarValor(7)" class="button number">7</button>
                     <button onclick="asignarValor(8)" class="button number">8</button>
                     <button onclick="asignarValor(9)" class="button number">9</button>
                 </div>
-                <div class="flexRow">
+                <div class="flexRowButtons">
                     <button onclick="asignarValor(4)" class="button number">4</button>
                     <button onclick="asignarValor(5)" class="button number">5</button>
                     <button onclick="asignarValor(6)" class="button number">6</button>
                 </div>
-                <div class="flexRow">
+                <div class="flexRowButtons">
                     <button onclick="asignarValor(1)" class="button number">1</button>
                     <button onclick="asignarValor(2)" class="button number">2</button>
                     <button onclick="asignarValor(3)" class="button number">3</button>
                 </div>
-                <div class="flexRow">
+                <div class="flexRowButtons">
                     <button onclick="asignarValor(',')" class="button number">,</button>
                     <button onclick="asignarValor(0)" class="button number">0</button>
                     <button onclick="resolver()" class="button number" id="botonResolver">=</button>
@@ -42,13 +52,12 @@
                 <button onclick="asignarValor('*')" class="button operator">x</button>
                 <button onclick="asignarValor('-')" class="button operator">-</button>
                 <button onclick="asignarValor('+')" class="button operator">+</button>
-
-
             </div>
         </div>
     </div>
     <div class="historial">
-        <input type="text" id="historial">
+        <input type="text" id="historial" disabled>
     </div>
 </body>
+<script src="../js/functions.js">sessionStorage("operations","");</script>
 </html>
