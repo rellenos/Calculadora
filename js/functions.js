@@ -9,21 +9,21 @@ document.addEventListener('DOMContentLoaded', function() {
 //funcions per convertir els numeros en binari, hexadecimal o octal
 function decToBin() {
     let convertToD = document.getElementById("pantalla").value;
-    let decimal = Number(convertToD);
+    let decimal = parseInt(convertToD);
     let binario = decimal.toString(2);
     document.getElementById('pantallaSecundaria1').innerHTML = binario;
 }
 
 function decToHex() {
     let convertToH = document.getElementById("pantalla").value;
-    let decimal = Number(convertToH);
+    let decimal = parseInt(convertToH);
     let hexadecimal = decimal.toString(16).toUpperCase();
     document.getElementById('pantallaSecundaria2').innerHTML = hexadecimal;
 }
 
 function decToOct() {
     let convertToO = document.getElementById("pantalla").value;
-    let decimal = Number(convertToO);
+    let decimal = parseInt(convertToO);
     let octal = decimal.toString(8);
     document.getElementById('pantallaSecundaria3').innerHTML = octal;
 }
@@ -40,10 +40,10 @@ function resolver() {
         let pantalla = document.getElementById("pantalla");
         let resultado = eval(pantalla.value);
         let pantallaHistorial = document.getElementById("historial");
-        historial.push(" " + pantalla.value + "=" + resultado);
+        historial.push(pantalla.value + "=" + resultado + "<br>");
         sessionStorage.setItem("operations", resultado);
-        pantalla.value = resultado;
-        pantallaHistorial.value = historial;
+        pantallaHistorial.innerHTML = historial;
+        // pantallaHistorial.value = historial;
         decToBin(); decToHex(); decToOct();
     }
     catch(error) {
